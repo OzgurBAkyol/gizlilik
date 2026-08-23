@@ -1,0 +1,125 @@
+/* Ortak görsel dil — dört uygulamanın gizlilik sayfaları aynı iskeleti kullanıyor.
+   Bağımlılık yok: tek dosya CSS, dış font yok, betik yok. Sayfanın kendisi de
+   izleme yapmıyor; bir gizlilik sayfasının analitik çalıştırması çelişki olurdu. */
+
+:root {
+  --zemin: #fbfaf7;
+  --kart: #ffffff;
+  --metin: #1a1a1a;
+  --soluk: #5c5c5c;
+  --cizgi: #e2ded6;
+  --vurgu: #7a5c3e;
+  --iyi-zemin: #eef5ee;
+  --iyi-cizgi: #b9d4b9;
+  --uyari-zemin: #fdf4e7;
+  --uyari-cizgi: #e8cfa6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --zemin: #171614;
+    --kart: #201f1c;
+    --metin: #ecebe7;
+    --soluk: #a5a29a;
+    --cizgi: #34322d;
+    --vurgu: #c9a87c;
+    --iyi-zemin: #1c2620;
+    --iyi-cizgi: #35513c;
+    --uyari-zemin: #2a2318;
+    --uyari-cizgi: #5c4a2e;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 2.5rem 1.25rem 4rem;
+  background: var(--zemin);
+  color: var(--metin);
+  font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+main { max-width: 46rem; margin: 0 auto; }
+
+header { margin-bottom: 2.5rem; }
+
+h1 { font-size: 1.9rem; line-height: 1.25; margin: 0 0 .4rem; letter-spacing: -.01em; }
+h2 { font-size: 1.15rem; margin: 2.4rem 0 .7rem; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.6rem 0 .5rem; color: var(--vurgu); }
+
+.tarih { color: var(--soluk); font-size: .875rem; margin: 0; }
+
+.ozet {
+  background: var(--iyi-zemin);
+  border: 1px solid var(--iyi-cizgi);
+  border-radius: 10px;
+  padding: 1.1rem 1.25rem;
+  margin: 1.75rem 0;
+}
+.ozet p { margin: .35rem 0; }
+.ozet strong { font-weight: 650; }
+
+.dikkat {
+  background: var(--uyari-zemin);
+  border: 1px solid var(--uyari-cizgi);
+  border-radius: 10px;
+  padding: 1.1rem 1.25rem;
+  margin: 1.5rem 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: .94rem;
+}
+th, td {
+  text-align: left;
+  padding: .6rem .7rem;
+  border-bottom: 1px solid var(--cizgi);
+  vertical-align: top;
+}
+th { font-weight: 620; color: var(--soluk); font-size: .85rem; text-transform: uppercase; letter-spacing: .03em; }
+
+.sarmal { overflow-x: auto; }
+
+ul { padding-left: 1.25rem; }
+li { margin: .4rem 0; }
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: .875em;
+  background: var(--kart);
+  border: 1px solid var(--cizgi);
+  border-radius: 4px;
+  padding: .1rem .35rem;
+  word-break: break-all;
+}
+
+a { color: var(--vurgu); }
+
+footer {
+  margin-top: 3.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--cizgi);
+  color: var(--soluk);
+  font-size: .875rem;
+}
+
+.geri { display: inline-block; margin-bottom: 1.5rem; font-size: .9rem; }
+
+.kartlar { display: grid; gap: .85rem; margin: 1.5rem 0; }
+.kartlar a {
+  display: block;
+  background: var(--kart);
+  border: 1px solid var(--cizgi);
+  border-radius: 10px;
+  padding: 1rem 1.15rem;
+  text-decoration: none;
+  color: var(--metin);
+}
+.kartlar a:hover { border-color: var(--vurgu); }
+.kartlar .ad { font-weight: 640; display: block; }
+.kartlar .ne { color: var(--soluk); font-size: .9rem; }
