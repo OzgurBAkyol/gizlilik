@@ -16,7 +16,8 @@
 </header>
 
 <div class="ozet">
-  <p><strong>Fotoğraflarınız cihazınızdan çıkmıyor.</strong> Uygulamanın geliştiriciye ait bir sunucusu yok; hiçbir yere veri gönderilmiyor. Uygulamada ağ katmanı bulunmuyor — Kombinle'yi uçak modunda açıp tam olarak kullanabilirsiniz.</p>
+  <p><strong>Fotoğraflarınız cihazınızdan çıkmıyor.</strong> Kıyafet fotoğraflarınız, dolabınız ve profiliniz yalnızca cihazınızda durur; hiçbiri gönderilmez.</p>
+  <p><strong>Tek istisna hava durumu.</strong> Kombini bulunduğunuz yerin sıcaklığına göre kurabilmek için konumunuz ~1 km'ye yuvarlanarak bir hava servisine sorulur. Gönderilen tek şey bu kaba koordinattır; kimlik, fotoğraf ve dolap bilgisi gitmez ve koordinat hiçbir yere kaydedilmez.</p>
   <p><strong>Hesap açmanız gerekmiyor.</strong> Ad, e-posta veya telefon istenmiyor; kayıt ve giriş ekranı yok.</p>
   <p><strong>Fotoğraflarınızla model eğitilmiyor.</strong> Ne bizim tarafımızdan ne de başkası tarafından.</p>
 </div>
@@ -41,8 +42,18 @@ hepsi cihazdan kaldırılır.</p>
 
 <h2>2. Cihazdan çıkan veri</h2>
 
-<p><strong>Yok.</strong> Uygulama herhangi bir sunucuya veri göndermez.
-İnternet bağlantısı gerektiren bir özelliği yoktur.</p>
+<p>Yalnızca hava durumu sorgusu. Uygulama, bulunduğunuz yerin sıcaklığını
+almak için <strong>Open-Meteo</strong> servisine bir istek yapar ve bu
+istekte yalnızca <strong>iki ondalığa yuvarlanmış</strong> (~1 km) enlem ve
+boylam bulunur. İstekle birlikte hiçbir kimlik bilgisi gönderilmez; hesap,
+cihaz kimliği ya da çerez kullanılmaz. Koordinat hiçbir yere kaydedilmez.</p>
+
+<p>Bunun dışında hiçbir veri cihazınızdan çıkmaz. Konum iznini vermezseniz
+ya da internet yoksa sıcaklığı kendiniz girersiniz ve uygulamanın geri
+kalanı aynen çalışır.</p>
+
+<p>Şehir adı cihazınızda çözülür (iOS'un kendi coğrafi çözümleyicisi); hava
+servisine gitmez.</p>
 
 <h2>3. Fotoğrafların işlenmesi</h2>
 
@@ -89,7 +100,7 @@ dokunulmadan.</p>
   <tr><th>İzin</th><th>Durum</th></tr>
   <tr><td>Kamera</td><td>İsteniyor — yalnız siz "kıyafet ekle" dediğinizde fotoğrafı çekmek için</td></tr>
   <tr><td>Fotoğraf kitaplığı</td><td>İsteniyor — yalnız sizin seçtiğiniz fotoğraf okunur, kitaplığınız taranmaz</td></tr>
-  <tr><td>Konum</td><td>İstenmiyor — hava sıcaklığını siz giriyorsunuz</td></tr>
+  <tr><td>Konum</td><td>İsteniyor — yalnız hava durumu için; ~1 km'ye yuvarlanıp sorulur, kaydedilmez</td></tr>
   <tr><td>Bildirimler, mikrofon, kişiler, takvim, sağlık</td><td>İstenmiyor</td></tr>
 </table>
 </div>
