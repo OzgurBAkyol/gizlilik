@@ -1,4 +1,4 @@
-<!-- emniyet:sha=b477708 -->
+<!-- emniyet:sha=b7d4064 -->
 <!-- ÜRETİLEN DOSYA — "Son değişiklikler" tablosunu ELLE DÜZENLEME.
      `stheno-emniyet` her çalıştığında git'ten yeniden yazıyor.
      Elle yazılacak yerler: DURUM, SIRADA ve DİKKAT bölümleri. -->
@@ -31,6 +31,7 @@ _(bilinen tuzak yazılmadı)_
 
 | Tarih | Kim | Makine | Ne | Dosya | Commit |
 |---|---|---|---|---|---|
+| 2026-09-26 | Özgür Berke Akyol | — | Harf Harf gizlilik politikası | 3 | `b7d4064` |
 | 2026-09-25 | Özgür Berke Akyol | — | Loopboard gizlilik politikası | 3 | `b477708` |
 | 2026-09-21 | Özgür Berke Akyol | — | Devir dosyası eklendi (üretilen) | 1 | `76744aa` |
 | 2026-09-20 | Özgür Berke Akyol | — | Kombinle: hava durumu ve konum gizlilik metnine eklendi | 1 | `cb12566` |
